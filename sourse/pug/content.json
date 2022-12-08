@@ -1,0 +1,31 @@
+{
+	"nav":[
+		{ "name":"О тренинге", "url":"#sPracticum"},
+		{	"name":"О деньгах", "url":"#sEarnMoney"},
+		{"name":"Об авторе", "url":"#sAuthor"},
+		{"name":"О программе", "url":"#sHowLearn"} ,
+		{ "name":"#ЯНАНАУЧИТ ",  "url":"#sWhatLearn"}
+	],
+	"social":[
+		"fb","instagram","telegram"
+	],
+	"index":{
+		"head": {
+			"title": "тест dffsdf dfsdтест 2222"
+		}
+	},
+	"items": [
+			{
+			"title": "заловок",
+			"text": "текст"
+		},
+			{
+			"title": "заловок 22",
+			"text": "текст"
+		},
+			{
+			"title": "заловок 33",
+			"text": "текст"
+			}
+		]
+	}

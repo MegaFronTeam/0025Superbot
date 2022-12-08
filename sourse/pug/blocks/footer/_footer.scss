@@ -1,0 +1,79 @@
+.footer {
+	position: relative;
+	// background-color: #EEEFF2;		
+	margin-top: rem(50);
+	padding: rem(65) 0 rem(56);
+	color: $black;
+	a {
+		color: $black;
+		font-size: 16px;
+		text-decoration: underline;
+	}
+	// background-image: url(..);
+	.container {
+		position: relative;
+
+		.before {
+			// content: url(../img/@2x/logo.png);
+
+			// @include a-cent;
+			@include media-breakpoint-up(md) {
+
+				top: 40%;
+				left: 45%;
+				position: absolute;
+				margin-left: rem(-111 * .5);
+				margin-top: rem(-95 * .5);
+				margin-bottom: rem(20);
+			}
+
+			display: block;
+
+			margin-bottom: rem(20);
+		}
+	}
+
+	// background: #EDEDF5;
+	// color: $body-color;
+	@extend .section;
+
+	a {
+		@extend .text-body;
+		// @extend .tdu;
+		color: $body-color!important;
+		&:hover{
+			color: rgba($body-color, .8) !important;
+		}
+		display: inline-block;
+	}
+
+	.spiner {
+		margin-left: rem(10);
+		margin-right: rem(10);
+	}
+
+	&__txt--h6 {
+		@extend .h6;
+		font-weight: bold;
+		line-height: 1.68;
+		a{
+			// border-bottom: 1px solid;
+			line-height: 1;
+			&:hover{
+				// border-color: transparent;
+			}
+		}
+	}
+	.h6{
+		color: #000;font-size: 20px;
+	}
+
+	strong.h6 {
+		display: block;
+		margin-bottom: rem(10);
+	}
+
+	p {
+		margin-bottom: rem(20);
+	}
+}

@@ -1,0 +1,158 @@
+mixin form-head()
+	form.js-form-validate( data-parsley-validate="") 
+		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+		block
+
+mixin input(placeholder,  t='text', label, name= t)
+	mixin t(t='text',placeholder, name= t)
+		if t== "textarea"
+			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
+		else if t== "select"
+			+e.SELECT.input.form-select( name= name)&attributes(attributes)
+				option(value= placeholder)= placeholder
+				- for (var x = 1; x < 5; x++)
+					option(value=` placeholder ${x}`)= `placeholder ${x}`
+		else if t=='file'
+			+e.INPUT.input.form-control(name=name type=t)&attributes(attributes)
+			
+		else if t=='number'
+			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')&attributes(attributes)
+		else if t=='date'
+			+e.INPUT.input.form-control(name=name type=t )&attributes(attributes)
+		else
+			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
+	+e.input-wrap.form-group
+		if label
+			label
+				+e.SPAN.input-title= label
+				+t(t,placeholder, name)&attributes(attributes)
+				block
+		else
+			+t(t,placeholder, name)&attributes(attributes)
+		block
+	// +e.input-wrap
+mixin select(label,pl,...items)
+	+e.input-wrap.form-group
+		label
+			+e.SPAN.title= label
+			+e.SELECT.input.form-control&attributes(attributes)
+
+					option()= pl
+					each item in items
+						option()= item
+
+//- wrapper for form
+mixin form-wrap(inp)
+	+b.form-wrap&attributes(attributes)
+		form
+			if inp
+				input(name='example-input-field', type='hidden')
+				input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+				input(class='utm_source' name='utm_source' type="hidden")
+				input(class='utm_term' name='utm_term' type="hidden")
+				input(class='utm_medium' name='utm_medium' type="hidden")
+				input(class='utm_campaign' name='utm_campaign' type="hidden")
+			block
+//- /wrapper for form
+
+
+mixin in-c(typ="checkbox", text, name= typ )
+	+b.LABEL.custom-input.form-check
+		+e.INPUT.input.form-check-input(name=name, type=typ)&attributes(attributes)
+		if block
+			block 
+		else
+			+e.SPAN.text.form-check-label= text
+ 
+mixin add-file(n)
+	+b.add-file
+		label
+			+e.INPUT.input(name='file', type='file')
+			+e.SPAN.btn 
+			+e.SPAN.text   Прикрепить резюме
+		+e.SPAN.filename 
+
+
+mixin policy()
+	+e.policy
+		+in-c()(checked)
+			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+mixin form-cont()
+	+b.form-cont#form-cont
+		.row
+			+e.col.col 
+					+e.title Лучшие условия доступны самым быстрым!
+
+					+e.txt Введите свои данные прямо сейчас
+			.col-md-auto
+				+b.form-wrap
+						
+						#bf304.inbfrm.v2
+							#bf304_inner 
+								form#bf304_form(action='//info-dvd.ru/bbm/order/divru2022consult/?bform_id=304' method='POST' accept-charset='windows-1251' onsubmit='return bf304.check();')
+									input(type='hidden' name='good_id' value='divru2022consult')
+									input(type='hidden' name='bform_id' value='304')
+									input(type='hidden' name='comment_author' value='')
+									input(type='hidden' name='comment_text' value='')
+									.input_line
+										//- input.text(name='fullname' type='text' value='' placeholder='Ваши ФИО' required='required')
+										+input('Ваше имя', 'text', '', 'fullname')(required).text
+									.input_line
+										+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required).text
+										//- input.text(name='phone' type='text' value='' placeholder='7 ( ____ ) ____ - ___ - ___' required='required')
+									.input_line
+										+input('E-mail (необязательно)', 'email','','email').text
+										//- input.text(name='email' type='email' value='' placeholder='E-mail (необязательно)'  )
+									.submit_line
+										input.button(type='submit' name='submit' value='Получить доступ')
+									<div class="privacy_agreement_block">
+										<label>
+											<input type="checkbox" name="oferta_warn" value="1" checked="checked" required="required"> <span class="ibfm_txt">Я согласен с условиями</span> <a href="javascript:void(0)" onclick="return window['bf304'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;">публичной оферты</a>
+										</label>
+
+									</div>
+									//- .privacy_agreement_block
+									//- 	label
+									//- 		input(type='checkbox' name='oferta_warn' value='1' checked='checked' required='required')
+									//- 		span.ibfm_txt Я согласен с условиями
+									//- 		a(href='javascript:void(0)' onclick="return window['bf304'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;") публичной оферты
+						script(type='text/javascript').
+							(function (d, w, src, r, c) {
+							var rid = r.toString().substr(2);
+							var n = d.getElementsByTagName("script")[0],s = d.createElement("script"),
+							f = function () { n.parentNode.insertBefore(s, n); };
+							var p=d.location.protocol;if (p!='http:' && p!='https:' && src.indexOf('//')==0){src='http:'+src}
+							s.type = "text/javascript";s.async = true;s.src = src+(src.indexOf('?')==-1 ? '?' : '&')+'r='+rid;
+							if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f();}
+							if (c) { s.addEventListener('load', function (e) { c(null, e); }, false); }
+							})(document, window, "//info-dvd.ru/bbm/js/bbm_form.js", Math.random(), function(){
+							window['bf304'] = new BbmFormMng({
+							id: 'bf304',
+							langs: {
+							errors : {
+							email_pattern: 'Введите корректный адрес электронной почты.',
+							alphanumeric_pattern: 'Может содержать только маленькие английские буквы и цифры',
+							phone_pattern: 'Некорректный формат телефона',
+							zip_pattern: 'Некорректный формат почтового индекса',
+							empty_field: 'Это поле необходимо заполнить.',
+							min_limit: 'Укажите значение не меньше ',
+							//- oferta_warn: 'Необходимо согласиться с условиями публичной оферты!'
+							},
+							processing: 'Обработка...'
+							}, rules: {
+							kupon:['alphanumeric'],
+							phone:['phone', 'required'],
+							email:['required', 'email'],
+							fullname:['required']
+							},
+							phone_verification: false	});
+							});
+
+				//- +form-wrap()
+				//- 	+input('Ваше имя', 'text', '', 'fullname')(required)
+				//- 	+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required)
+				//- 	+input('E-mail (необязательно)', 'email','','email')
+				//- 	+e.BUTTON.btn(type="submit") Отправить
+			.col-lg
+				+pic("form-man.png",'',0)

@@ -1,0 +1,225 @@
+// start .headerBlock
+.headerBlock {
+	@include media-breakpoint-up(lg) {
+	padding-top: 8.5%;
+	}
+	padding-top: 60px;
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
+	padding-bottom: 45px;
+	// background-position: 50% -50%;
+	@include media-breakpoint-up(lg){
+		background-image: url(../img/head-bg.svg);
+		padding-bottom: 450px;
+
+		background-position: bottom;
+	}
+	// background-color: #000000;
+	&__body{
+		// z-index: 5;
+		// position: relative;
+		
+	}
+	&__inner {
+		position: relative;
+		@include media-breakpoint-down(xl) {
+			padding-bottom: 200px;
+		}
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 0;
+		}
+		p {
+			margin-bottom: $grid-gutter-width;
+			max-width: 712px;
+			font-size: rem(20);
+			font-weight: 700;
+			// line-height: 140%;
+			letter-spacing: 0.01em; 
+			color: #6F7C81;
+
+		}
+
+		ul{
+			margin-bottom: 46px;
+			li{
+				font-weight: 500;
+				color: $secondary;
+				margin-bottom: rem(13);
+				max-width: rem(440);
+				list-style: none;
+				display: flex;
+				&::before{
+					content: var(--marker);
+					margin-right: 23px;
+				}
+				&:nth-child(1){
+					--marker: url(../img/mortarboard.svg)
+				}
+				
+				&:nth-child(2){
+					--marker: url(../img/bar-chart.svg)
+				}
+				&:nth-child(3){
+					--marker: url(../img/space-rocket-launch.svg)
+				}
+
+			}
+		}
+		.btn {
+			line-height: 1;
+			@include media-breakpoint-down(lg){
+				display: block;
+				max-width: max-content;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			@include media-breakpoint-up(lg){
+
+				margin-bottom: rem(91);
+			}
+			margin-bottom: rem(31);
+		}
+	}
+	h1 {
+		max-width: 710px;
+		margin-bottom: $grid-gutter-width;
+		font-weight: 900;
+		line-height: calc(65 / 60); 
+		// letter-spacing: rem(-4);
+	}
+	&__img-wrap {
+		
+		@include media-breakpoint-up(lg) {
+		// bottom: 0;
+		top: rem(-60);
+    position: absolute;
+    z-index: 10;
+		right: -30%;
+	}
+	@include media-breakpoint-up(xl) {
+			right: -5%;
+			// bottom: -10%;
+		}
+		@include media-breakpoint-down(lg) {
+			// z-index: -1;
+			position: relative;
+			max-width: 100%;
+			// margin-top: -45%;
+			margin-bottom: -60px;
+			img {
+				max-width: 100%;
+				object-position: center top;
+			}
+		}
+	}
+	&__footer {
+		position: relative;
+		display: flex;
+		background-color: $blue;
+		background-image: url('../img/head-footer-bg.jpg');
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: left center;
+		box-shadow: 0px 4px 50px rgba(90, 134, 235, 0.36);
+		border-radius: 8px;
+		padding: rem(28) rem(16);
+		@include media-breakpoint-up(md) {
+			
+			padding: rem(48) rem(56);
+		}
+		@include media-breakpoint-up(xl) {
+			background-size: 60% auto;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@include media-breakpoint-up(md) {
+			background: linear-gradient(270deg, rgba(48, 77, 152, 0.75) 59.5%, rgba(49, 79, 155, 0) 71.51%);
+		}
+		background: linear-gradient(270deg, rgba(48, 77, 152, 0.75) 59.5%, rgba(49, 79, 155, 0) 101.51%);
+			}
+		p {
+			display: inline-block;
+			margin-left: auto;
+			max-width: 672px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 140%;
+			color: $white;
+			z-index: 10;
+		}
+	}
+
+	&__caption {
+		position: absolute;
+		top: 7%;
+		right: 2%;
+		max-width: 150px;
+		span {
+			font-size: 16px;
+		}
+	}
+
+	// h1 {
+	// 	margin-bottom: 1px;
+	// }
+
+	// h2 {
+	// 	margin-bottom: 1px;
+	// }
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {
+		h1{
+			// font-size: calc(1.2rem + 3vw);
+		}
+		&__body{
+			display: flex;
+			flex-direction: column;
+			ul,
+			p{	
+				order: 2;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.headerBlock
