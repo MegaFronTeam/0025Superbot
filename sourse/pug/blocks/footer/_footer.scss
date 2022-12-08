@@ -1,8 +1,8 @@
 .footer {
 	position: relative;
 	// background-color: #EEEFF2;		
-	margin-top: rem(50);
-	padding: rem(65) 0 rem(56);
+	// margin-top: rem(50);
+	padding: rem(72) 0 rem(81);
 	color: $black;
 	a {
 		color: $black;
@@ -40,9 +40,9 @@
 	a {
 		@extend .text-body;
 		// @extend .tdu;
-		color: $body-color!important;
+		color: #fff!important;
 		&:hover{
-			color: rgba($body-color, .8) !important;
+			color: rgba(#fff, .8) !important;
 		}
 		display: inline-block;
 	}
@@ -52,20 +52,25 @@
 		margin-right: rem(10);
 	}
 
-	&__txt--h6 {
-		@extend .h6;
-		font-weight: bold;
-		line-height: 1.68;
-		a{
-			// border-bottom: 1px solid;
-			line-height: 1;
-			&:hover{
-				// border-color: transparent;
+	&__txt {
+		color: #fff;
+		font-size: rem(16);
+		&--h6 {
+			@extend .h6;
+			font-weight: bold;
+			line-height: 1.68;
+			a{
+				// border-bottom: 1px solid;
+				line-height: 1;
+				&:hover{
+					// border-color: transparent;
+				}
 			}
 		}
 	}
 	.h6{
-		color: #000;font-size: 20px;
+		color: #fff;
+		font-size: 20px;
 	}
 
 	strong.h6 {
