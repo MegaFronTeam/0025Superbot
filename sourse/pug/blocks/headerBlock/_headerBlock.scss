@@ -8,12 +8,12 @@
 	// min-height: calc(var(--vh, 1vh) * 100);
 	padding-bottom: 45px;
 	// background-position: 50% -50%;
-	@include media-breakpoint-up(lg){
-		background-image: url(../img/head-bg.svg);
-		padding-bottom: 450px;
+	// @include media-breakpoint-up(lg){
+	// 	background-image: url(../img/head-bg.svg);
+	// 	padding-bottom: 450px;
 
-		background-position: bottom;
-	}
+	// 	background-position: bottom;
+	// }
 	// background-color: #000000;
 	&__body{
 		// z-index: 5;
@@ -29,25 +29,35 @@
 			padding-bottom: 0;
 		}
 		p {
-			margin-bottom: $grid-gutter-width;
-			max-width: 712px;
-			font-size: rem(20);
-			font-weight: 700;
-			// line-height: 140%;
-			letter-spacing: 0.01em; 
-			color: #6F7C81;
-
+			margin-bottom: rem(40);
+			max-width: rem(607);
+			font-size: rem(24);
+			font-weight: 600;
+			line-height: 1.5em;
+			// letter-spacing: 0.01em; 
+			// color: #6F7C81;
+			span {
+				color: $primary;
+			}
 		}
 
 		ul{
-			margin-bottom: 46px;
+			@include roww('40px', 'm');
+			display: flex;
+			margin-bottom: rem(46);
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(78);
+			}
 			li{
-				font-weight: 500;
-				color: $secondary;
-				margin-bottom: rem(13);
-				max-width: rem(440);
 				list-style: none;
+				font-weight: 700;
+				color: $primary;
 				display: flex;
+				flex-direction: column;
+				font-size: rem(15);
+				line-height: 1.6em;
+				letter-spacing: 0.01em;
+				max-width: rem(162);
 				&::before{
 					content: var(--marker);
 					margin-right: 23px;
@@ -62,7 +72,6 @@
 				&:nth-child(3){
 					--marker: url(../img/space-rocket-launch.svg)
 				}
-
 			}
 		}
 		.btn {
@@ -81,25 +90,27 @@
 		}
 	}
 	h1 {
-		max-width: 710px;
-		margin-bottom: $grid-gutter-width;
+		max-width: 828px;
+		margin-bottom: rem(40);
 		font-weight: 900;
-		line-height: calc(65 / 60); 
+		line-height: 1.12em; 
 		// letter-spacing: rem(-4);
+		span {
+			color: $primary;
+		}
 	}
 	&__img-wrap {
-		
 		@include media-breakpoint-up(lg) {
-		// bottom: 0;
-		top: rem(-60);
-    position: absolute;
-    z-index: 10;
-		right: -30%;
-	}
-	@include media-breakpoint-up(xl) {
-			right: -5%;
-			// bottom: -10%;
+			// bottom: 0;
+			top: rem(-138);
+			position: absolute;
+			z-index: -1;
+			right: -20%;
 		}
+		// @include media-breakpoint-up(xl) {
+		// 	right: -5%;
+		// 	// bottom: -10%;
+		// }
 		@include media-breakpoint-down(lg) {
 			// z-index: -1;
 			position: relative;
