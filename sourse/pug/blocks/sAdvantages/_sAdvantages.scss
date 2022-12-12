@@ -1,43 +1,115 @@
 // start .sAdvantages
 .sAdvantages {
-	.section-subtitle{
-		max-width: 80%;
+	--sPT: #{rem(24)};
+	--sPB: #{rem(24)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(48)};
+		--sPB: #{rem(48)};
 	}
+	--sPT: #{rem(57.5)};
+	--sPB: #{rem(91)};
 	z-index: 2;
-	// background-color: #F2F2F5;
 	position: relative;
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-	// background-image: url('../img/advantages-bg.png');
-	// background-repeat: no-repeat;
-	// +e.bg-wrap {
-		
-	// }
-	img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: left top;
+	h3 {
+		font-weight: 800;
+		line-height: 1.40em;
+		margin-bottom: 0;
+		span {
+			color: $primary;
+		}
 	}
-	h2 {
-		max-width: 700px;
+	.section-title {
+		--sTPB: #{rem(40)};
+		@include media-breakpoint-up(md) {
+			--sTPB: #{rem(60)};
+		}
+
+		max-width: rem(1008);
+		h3 {
+			margin-bottom: rem(16);
+		}
+		h5 {
+			color: $primary;
+			line-height: 1.6em;
+			letter-spacing: 0.01em;
+			margin-bottom: 0;
+		}
 	}
-	dl {
-		max-width: 700px;
+	&__row {
+		--bs-gutter-x: #{rem(40)};
+		--bs-gutter-y: #{rem(40)};
+
+		margin-bottom: rem(96);
 	}
-	dt {
-		margin-bottom: rem(14);
-		font-size: rem(24);
+	&__col {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
 	}
-	dd {
-		margin-bottom: rem(40);
+	ul {
+		--bs-gutter-y: #{rem(30)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(60)};
+		}
+
+		list-style-type: none;
+		margin-bottom: 0;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+		li {
+			--iconSize: #{rem(48)};
+
+			position: relative;
+			flex-grow: 1;
+			@include media-breakpoint-up(md) {
+				padding-left: calc(var(--iconSize) + #{rem(32)});
+			}
+			&::before {
+				content: '';
+				display: block;
+				width: var(--iconSize);
+				height: var(--iconSize);
+				background-image: var(--listIcon);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				margin-bottom: rem(16);
+				@include media-breakpoint-up(md) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					margin-bottom: 0;
+				}
+			}
+			p {
+				line-height: 1.70em;
+				margin-bottom: 0;
+				font-size: rem(18);
+				@include media-breakpoint-up(md) {
+					font-size: rem(20);
+				}
+			}
+		}
+	}
+	&__bad-list {
+		li {
+			max-width: rem(492);
+			p {
+				opacity: .5;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 0;
+		padding-bottom: rem(25);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(50);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -47,32 +119,32 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sAdvantages
-.points {
-	position: relative;
-	display: inline-block;
-	margin-left: 10px;
-	margin-right: 20px;
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-	background-color: $blue;
-	// bottom:10px;
-	line-height: 1;
-	&::after,
-	&::before {
-		content: '';
-		position: absolute;
-		display: inline-block;
-		width: 5px;
-		height: 5px;
-		top: 0;
-		border-radius: 50%;
-		background-color: $blue;
-	}
-	&::before {
-		left: -10px;
-	}
-	&::after {
-		right: -10px;
-	}
-}
+// .points {
+// 	position: relative;
+// 	display: inline-block;
+// 	margin-left: 10px;
+// 	margin-right: 20px;
+// 	width: 5px;
+// 	height: 5px;
+// 	border-radius: 50%;
+// 	background-color: $blue;
+// 	// bottom:10px;
+// 	line-height: 1;
+// 	&::after,
+// 	&::before {
+// 		content: '';
+// 		position: absolute;
+// 		display: inline-block;
+// 		width: 5px;
+// 		height: 5px;
+// 		top: 0;
+// 		border-radius: 50%;
+// 		background-color: $blue;
+// 	}
+// 	&::before {
+// 		left: -10px;
+// 	}
+// 	&::after {
+// 		right: -10px;
+// 	}
+// }
