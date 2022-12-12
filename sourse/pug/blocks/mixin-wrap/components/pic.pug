@@ -1,6 +1,6 @@
 - let webpImage= true
 - let webpFormat= (webpImage== true ? 'webp' : null)
-mixin pic(i, bg,  media)
+mixin pic(i, bg,  media, loading='lazy')
 	-
 		const smpath2 = "2x"
 		const smpath1 = "1x"
@@ -15,7 +15,7 @@ mixin pic(i, bg,  media)
 			source(type=`image/${exp}` srcset=url)&attributes(attributes)
 		else
 			
-				img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading='lazy' )
+				img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading=(loading=="lazy" ? "lazy": null ) )
 	
 	// picture
 	

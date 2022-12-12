@@ -1,12 +1,16 @@
 // start .headerBlock
 .headerBlock {
-	@include media-breakpoint-up(lg) {
-	padding-top: 8.5%;
-	}
 	padding-top: 60px;
+	padding-bottom: rem(23);
+	@include media-breakpoint-up(md) {
+		padding-bottom: rem(46);
+	}
+	@include media-breakpoint-up(lg) {
+		padding-top: 6.9%;
+		padding-bottom: rem(86);
+	}
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
-	padding-bottom: 45px;
 	// background-position: 50% -50%;
 	// @include media-breakpoint-up(lg){
 	// 	background-image: url(../img/head-bg.svg);
@@ -42,11 +46,17 @@
 		}
 
 		ul{
-			@include roww('40px', 'm');
+			--bs-gutter-y: #{rem(20)};
+			@include roww('32px', 'm');
 			display: flex;
-			margin-bottom: rem(46);
-			@include media-breakpoint-down(lg) {
-				margin-bottom: rem(78);
+			flex-wrap: wrap;
+			margin-bottom: 0;
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			& > * {
+				margin-top: var(--bs-gutter-y);
+			}
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(80);
 			}
 			li{
 				list-style: none;
@@ -57,44 +67,53 @@
 				font-size: rem(15);
 				line-height: 1.6em;
 				letter-spacing: 0.01em;
-				max-width: rem(162);
+				max-width: calc(50% - var(--bs-gutter-x));
+				@include media-breakpoint-up(md) {
+					max-width: rem(162);
+				}
 				&::before{
 					content: var(--marker);
-					margin-right: 23px;
+					margin-bottom: rem(4);
 				}
 				&:nth-child(1){
-					--marker: url(../img/mortarboard.svg)
+					--marker: url(../img/svg/ai.svg)
 				}
 				
 				&:nth-child(2){
-					--marker: url(../img/bar-chart.svg)
+					--marker: url(../img/svg/money-bag.svg)
 				}
 				&:nth-child(3){
-					--marker: url(../img/space-rocket-launch.svg)
+					--marker: url(../img/svg/artificial-intelligence.svg)
 				}
 			}
 		}
 		.btn {
 			line-height: 1;
+			@include media-breakpoint-down(sm){
+				--bs-btn-font-size: #{rem(14.4)};
+			}
 			@include media-breakpoint-down(lg){
 				display: block;
 				max-width: max-content;
 				margin-left: auto;
 				margin-right: auto;
 			}
-			@include media-breakpoint-up(lg){
+			// @include media-breakpoint-up(lg){
 
-				margin-bottom: rem(91);
-			}
-			margin-bottom: rem(31);
+			// 	margin-bottom: rem(91);
+			// }
+			// margin-bottom: rem(31);
 		}
 	}
 	h1 {
 		max-width: 828px;
-		margin-bottom: rem(40);
+		margin-bottom: rem(46);
 		font-weight: 900;
 		line-height: 1.12em; 
 		// letter-spacing: rem(-4);
+		@include media-breakpoint-down(sm) {
+			font-size: rem(26);
+		}
 		span {
 			color: $primary;
 		}
