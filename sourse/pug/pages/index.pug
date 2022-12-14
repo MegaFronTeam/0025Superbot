@@ -28,6 +28,9 @@ include ../blocks/sForYou/_sForYou.pug
 include ../blocks/sWhatLearn/_sWhatLearn.pug
 include ../blocks/sReallyImportant/_sReallyImportant.pug
 include ../blocks/s5Steps/_s5Steps.pug
+include ../blocks/sCreate/_sCreate.pug
+include ../blocks/sGetTool/_sGetTool.pug
+include ../blocks/sCharacteristics/_sCharacteristics.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -52,12 +55,17 @@ block pagecontent
 	+sWhatThink
 	+sAdvantages
 	+sPracticum()
+	+sCreate
 	+sEarnMoney
+	+sGetTool
+
+	+sCharacteristics
+
 	+sHowMuch
 	+sAuthor
-	+sKnowing()
+	//- +sKnowing()
 
-	+sEasy
+	//- +sEasy
 	+sHowLearn
 	
 	//- +sWhy()
@@ -72,8 +80,8 @@ block pagecontent
 	//- +sAdvantages()
 	//- +sNeeded()
 
-	+s5Steps
-	+sReallyImportant
+	//- +s5Steps
+	//- +sReallyImportant
 	+sWhatLearn
 	+sForYou
 	+sAccess()

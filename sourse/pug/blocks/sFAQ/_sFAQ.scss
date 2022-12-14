@@ -23,25 +23,26 @@
 			padding-top: rem(40);
 			padding-bottom: rem(40);
 			padding-right: rem(45);
-			font-weight: 700;
+			font-weight: 600;
+			color: $gray-100;
 			cursor: pointer;
-			font-size: rem(30);
+			font-size: rem(24);
 			
 		}
 		&__toggle{
-			width: 2rem;
-			height: 2rem;
+			width: rem(32);
+			height: rem(32);
 			position: absolute;
 			right: 0;
-			top: rem(45);
+			top: rem(40);
 			&::before,
 			&::after {
 				content: '';
 				position: absolute;
-				width: 2rem;
+				width: rem(32);
 				height: 2px;
 				top: 50%;
-				background-color: $success;
+				background-color: #0090EC;
 				margin-top: -1px;
 				transition: transform .3s ease-in-out;
 				// transform: rotateX(180deg);
@@ -52,6 +53,7 @@
 		}
 		&__content {
 			padding-bottom: rem(40);
+			color: rgba($color: $gray-100, $alpha: .5);
 			&:not(.active) {
 				display: none;
 			}

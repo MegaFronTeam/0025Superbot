@@ -14,8 +14,15 @@
 	}
 	.inbfrm.v2 form .input_line input{
 
-		@extend .form-control;
+		// @extend .form-control;
 		text-align: left;
+		background-color: #FFFFFF;
+		border: 1px solid #E0E0E0;
+		border-radius: 8px;
+		color: #828282;
+		font-size: rem(16);
+		line-height: 1.7em;
+		padding: rem(10) rem(20);
 	}
 	&__btn{
 		@extend .btn, .btn-primary;
@@ -31,7 +38,11 @@
 		//  outline: 0 !important;
 		 resize: none;
  	}
- 	&__btn{
+ 	.button{
+		--bs-btn-font-size: #{rem(15)};
+		--bs-btn-padding-y: #{rem(10.034)};
+
+		width: 100%;
  		cursor: pointer;
  	}
  	label{
@@ -105,11 +116,11 @@
 
 
 .form-cont{
-	background: #FFFFFF;
-/* 1 */
-
-box-shadow: 0px 4px 59px rgba(0, 0, 0, 0.09);
-border-radius: 40px;
+	background-color: #0E1820;
+	/* 1 */
+	
+	box-shadow: 0px 4px 59px rgba(0, 0, 0, 0.09);
+	border-radius: 40px;
 
 	@include media-breakpoint-up(md) {
 
@@ -123,18 +134,19 @@ border-radius: 40px;
 		padding-bottom: 0;
 	}
 	&__title{
-		// color: $primary;
+		color: #0090EC;
 		@include rfs(30px);
-		font-weight: bold;
-		line-height: 130%;
+		font-weight: 800;
+		line-height: 1.40em;
+		margin-bottom: rem(20);
 		// flex-grow: 1;
 	}
 	&__txt{
-		font-size: rem(16);
-		max-width: 260px;
+		font-size: rem(20);
+		max-width: 238px;
+		line-height: 1.7em;
 	}
-	&__title,
-	&__txt{
+	&__title {
 		max-width: 300px;
 	}
 	&__col{

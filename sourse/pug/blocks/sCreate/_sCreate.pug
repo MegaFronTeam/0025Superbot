@@ -1,0 +1,30 @@
+mixin sCreate(data)
+	// start sCreate
+	+b.SECTION.sCreate.section#sCreate&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Создавайте и&nbsp;оптимизируйте #[span алгоритмические стратегии ] легко, без программирования
+				h4 Укажите начальную идею для торговой стратегии, которую&nbsp;Вы хотите протестировать, и&nbsp;запустите оптимизацию
+			h5 Superbot все сделает за&nbsp;Вас:
+			ul
+				li
+					+img('img/svg/sCreate-img-1.svg')
+					| Переберет десятки тысяч вариантов параметров для Вашей стратегии и&nbsp;покажет лучшие из&nbsp;них. Вы&nbsp;сможете выбрать тот набор параметров, который удовлетворит Вас по&nbsp;профиту и&nbsp;просадке.
+				li
+					+img('img/svg/sCreate-img-1.svg')
+					| Проведет тестирование стратегии на&nbsp;реальных данных, нарисует график роста депозита и&nbsp;предоставит всю статистику торговли для Вашего анализа
+				li
+					+img('img/svg/sCreate-img-1.svg')
+					| На&nbsp;понятном языке сгенерирует текстовое<br>.описание полученной стратегии.
+				li
+					+img('img/svg/sCreate-img-1.svg')
+					| Нанесет сделки на&nbsp;график, чтобы&nbsp;Вы могли наглядно<br>увидеть торговлю будущего робота
+			+e.wrap
+				h3 Смотрите в&nbsp;видео пример создания торговой стратегии с&nbsp;помощью 
+					span Superbot:
+				+e.video-wrap
+					<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="Fireplace 10 hours full HD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			+e.footer.text-center
+				h4 Всего несколько кликов мышки, и&nbsp;робот готов зарабатывать для Вас деньги.
+				a.btn.btn-primary(href="#sAccess") Хочу создавать торговых роботов без программирования
+	// end sCreate

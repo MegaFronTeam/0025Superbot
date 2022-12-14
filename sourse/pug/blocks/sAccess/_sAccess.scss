@@ -1,27 +1,38 @@
 // start .sAccess
 .sAccess {
-	--sPT: 0;
+	--sPT: #{rem(28)};
+	background-color: #006DB1;
+	box-shadow: 0px 80px 166px -81px #105280;
+	border-radius: 0 0 8px 8px;
 	.container {
 		position: relative;
 	}
+	&__row {
+		--bs-gutter-y: #{rem(15)};
+	}
 	h2{
 		max-width: 1200px;
+		span {
+			color: $primary;
+		}
 	}
 	.section-title {
-		margin-bottom: rem(60);
+		margin-bottom: rem(85);
 		p{
 			// font-size: rem(24);
-			@include rfs(24px);
-			margin-bottom: 24px;
-			color: $secondary;
+			@include rfs(20px);
+			margin-bottom: 11px;
+			color: $gray-100;
 			position: relative;
 			display: flex;
-			justify-content: space-between;
-			align-items: flex-end;
-			font-weight: 600;
+			font-weight: 400;
+			// justify-content: space-between;
+			// align-items: flex-end;
 			&::after{
-				content: url(../img/arrow.png);
-				margin-bottom: -20px;
+				content: url(../img/@2x/arrow.png);
+				margin-bottom: -5px;
+				margin-top: 14px;
+				margin-left: rem(10);
 			}
 		}
 	}
@@ -47,10 +58,16 @@
 		}
 		position: relative;
 		z-index: 2;
-		background-color: #fff;
-		border: 2px dashed;
-		color: $success;
+		background-color: #0090EC;
+		// border: 2px dashed;
+		color: $gray-100;
 		flex-shrink: 0;
+	}
+	&__text {
+		font-size: rem(15);
+		font-weight: 500;
+		line-height: 1.7em;
+		color: #fff;
 	}
 	@include media-breakpoint-up(lg) {
 
@@ -139,10 +156,10 @@
 			position: relative;
 			margin-top: 100px;
 			// padding-top: rem(60);
-			&::before{
-				content: url(../img/form-after.png);
-				@include a-cent1;
-			}
+			// &::before{
+			// 	content: url(../img/form-after.png);
+			// 	@include a-cent1;
+			// }
 			// background-image: url(../img/form-after.png);
 			// background-repeat: no-repeat;
 			// background-position: center center;
@@ -165,6 +182,16 @@
 			}
 		}
 		}
+	&__text-policy {
+		text-align: center;
+		font-size: rem(12);
+		color: rgba($color: #fff, $alpha: .5);
+		a {
+			font-size: rem(12);
+			color: rgba($color: #fff, $alpha: .5);
+			text-decoration: underline;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

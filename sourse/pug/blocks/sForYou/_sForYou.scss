@@ -1,24 +1,45 @@
 // start .sForYou
 .sForYou {
-		// --sPT: ;
-		--sPB: 0;
-		--sTPB: #{rem(70)};
-		.container{
-			max-width: rem(1113);
+	--sPT: #{rem(100)};
+	--sPB: #{rem(28)};
+	--sTPB: #{rem(56)};
+	background: #006DB1;
+	border-radius: 8px 8px 0 0;
+	.container{
+		max-width: rem(1113);
+	}
+	.section-title {
+		h2 {
+			margin-bottom: rem(32);
+			span {
+				display: block;
+				color: $primary;
+			}
 		}
-		ol{
-			counter-reset: num;
-			border-top: 1px solid $secondary;
-			padding-left: 0;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: rem(50px);
+		h4 {
+			max-width: rem(824);
+			color: $gray-100;
+			font-weight: 600;
+			line-height: 1.5em;
+			margin-bottom: rem(32);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	ol{
+		counter-reset: num;
+		border-top: 1px solid $primary;
+		padding-left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(50px);
 	li{
 		position: relative; 
 		padding-left: rem(37 + 44);
-		border-bottom: 1px solid $secondary;
-		padding-top: rem(36);
-		padding-bottom: rem(36);
+		border-bottom: 1px solid $primary;
+		padding-top: rem(60);
+		padding-bottom: rem(60);
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -26,6 +47,7 @@
 			@include a-cent1(y);
 			left: 0;
 			color: $success; 
+			line-height: 1;
 			// font-weight: bold;
 			@include rfs(78px);
 		}
@@ -45,9 +67,9 @@
 			list-style: none;
 		}
 		&__footer{
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 780px;
+			// margin-left: auto;
+			// margin-right: auto;
+			max-width: 1058px;
 		}
 
 	@include media-breakpoint-up(xl) {}

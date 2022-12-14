@@ -105,13 +105,13 @@ mixin form-cont()
 										+input('E-mail (необязательно)', 'email','','email').text
 										//- input.text(name='email' type='email' value='' placeholder='E-mail (необязательно)'  )
 									.submit_line
-										input.button(type='submit' name='submit' value='Получить доступ')
-									<div class="privacy_agreement_block">
-										<label>
-											<input type="checkbox" name="oferta_warn" value="1" checked="checked" required="required"> <span class="ibfm_txt">Я согласен с условиями</span> <a href="javascript:void(0)" onclick="return window['bf304'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;">публичной оферты</a>
-										</label>
+										button.button.btn.btn-primary(type='submit') Получить доступ
+									//- <div class="privacy_agreement_block">
+									//- 	<label>
+									//- 		<input type="checkbox" name="oferta_warn" value="1" checked="checked" required="required"> <span class="ibfm_txt">Я согласен с условиями</span> <a href="javascript:void(0)" onclick="return window['bf304'].popup('https://info-dvd.ru/bbm/../../oferta?popup=1', 'win', 1050, 450); return false;">публичной оферты</a>
+									//- 	</label>
 
-									</div>
+									//- </div>
 									//- .privacy_agreement_block
 									//- 	label
 									//- 		input(type='checkbox' name='oferta_warn' value='1' checked='checked' required='required')

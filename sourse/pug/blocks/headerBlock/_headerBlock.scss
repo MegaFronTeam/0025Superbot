@@ -6,7 +6,7 @@
 		padding-bottom: rem(46);
 	}
 	@include media-breakpoint-up(lg) {
-		padding-top: 6.9%;
+		padding-top: 5.9%;
 		padding-bottom: rem(86);
 	}
 	// min-height: 100vh;
@@ -91,6 +91,7 @@
 			line-height: 1;
 			@include media-breakpoint-down(sm){
 				--bs-btn-font-size: #{rem(14.4)};
+				margin-bottom: rem(20);
 			}
 			@include media-breakpoint-down(lg){
 				display: block;
@@ -123,9 +124,9 @@
 			// bottom: 0;
 			top: rem(-138);
 			position: absolute;
-			z-index: -1;
 			right: -20%;
 		}
+		z-index: -1;
 		// @include media-breakpoint-up(xl) {
 		// 	right: -5%;
 		// 	// bottom: -10%;
