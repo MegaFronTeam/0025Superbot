@@ -1,10 +1,10 @@
 {
 	"nav":[
-		{ "name":"Создание стратегий", "url":"#sPracticum"},
-		{	"name":"Защита депозита", "url":"#sEarnMoney"},
-		{"name":"Доступные функции", "url":"#sAuthor"},
-		{"name":"Об авторе", "url":"#sHowLearn"} ,
-		{ "name":"Обучение ",  "url":"#sWhatLearn"}
+		{ "name":"Создание стратегий", "url":"#sCreate"},
+		{	"name":"Защита депозита", "url":"#sAdvantages"},
+		{"name":"Доступные функции", "url":"#sGetTool"},
+		{"name":"Об авторе", "url":"#sAuthor"} ,
+		{ "name":"Обучение ",  "url":"#sHowLearn"}
 	],
 	"social":[
 		"fb","instagram","telegram"

@@ -57,6 +57,24 @@
 			&:not(.active) {
 				display: none;
 			}
+			ul {
+				list-style-type: none;
+				li {
+					padding-left: rem(32);
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						display: block;
+						width: 4px;
+						height: 4px;
+						background-color: rgba(233,241,246,.5);
+						left: 13px;
+						top: 14px;
+						border-radius: 50%;
+					}
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

@@ -2,7 +2,8 @@ mixin sAuthor(data)
 	// start sAuthor
 	+b.SECTION.sAuthor.section#sAuthor&attributes(attributes)
 		+e.container.container
-			img(src='img/@2x/sAuthor-bg-1.png' alt='').img
+			+pic('sAuthor-bg-1.png', '', '', 'true').img
+			//- img(src='img/@2x/sAuthor-bg-1.png' alt='').img
 			+b.section-title
 				h2 Автор платформы<br>алгоритмического трейдинга Superbot
 				h4 Знакомьтесь:
