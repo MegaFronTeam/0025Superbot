@@ -31,6 +31,7 @@ include ../blocks/s5Steps/_s5Steps.pug
 include ../blocks/sCreate/_sCreate.pug
 include ../blocks/sGetTool/_sGetTool.pug
 include ../blocks/sCharacteristics/_sCharacteristics.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -60,7 +61,7 @@ block pagecontent
 	+sGetTool
 
 	+sCharacteristics
-
+	+sAlgorithm
 	+sHowMuch
 	+sAuthor
 	//- +sKnowing()
@@ -82,7 +83,7 @@ block pagecontent
 
 	//- +s5Steps
 	//- +sReallyImportant
-	+sWhatLearn
+	//- !! +sWhatLearn
 	+sForYou
 	+sAccess()
 	+sFAQ()

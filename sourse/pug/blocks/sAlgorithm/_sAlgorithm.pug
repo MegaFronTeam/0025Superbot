@@ -1,0 +1,38 @@
+mixin sAlgorithm(data)
+	// start sAlgorithm
+	+b.SECTION.sAlgorithm.section#sAlgorithm&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Прибыльный #[span алгоритмический трейдинг ] никогда еще не был таким простым!
+				h4 Просто откройте для себя еще один источник дохода. Superbot все делает за&nbsp;Вас.
+				h5 Взгляд сверху, как&nbsp;Вы будете зарабатывать с&nbsp;помощью Superbot:
+			+e.list-row.row
+				mixin col(text)
+					+e.col.col-sm-6.col-lg-4
+						+e.list-item
+							+e.num
+								<svg>
+									<circle cx='37' cy='37' r='35' stroke='#97D7FF' stroke-width='3' fill='none' />
+									<circle cx="37" cy="37" r="33" fill="#121212"></circle>
+								</svg>
+							p!= text
+				+col('Выставьте первоначальные настройки и&nbsp;запустите генерацию алгоритмических стратегий')
+				+col('Выберите лучшую стратегию<br>по&nbsp;показателям профита, просадки и&nbsp;расширенной статистики')
+				+col('Проведите стресс-тестирование полученной стратегии, чтобы выявить ее&nbsp;устойчивость к&nbsp;будущим изменениям рынка')
+				+col('Выставьте параметры риск-менеджмента и&nbsp;мани-менеджмента')
+				+col('Запустите полученного робота<br>в&nbsp;торговлю')
+				+col('Вернитесь к&nbsp;шагу 1&nbsp;и&nbsp;создайте портфель роботов для диверсификации')
+				+col('Следите за&nbsp;статистикой портфеля роботов через Телеграм, снимайте с&nbsp;торгов роботов, прибыль которых Вас не&nbsp;устраивает')
+			+e.title.h3 Superbot:
+			+e.row.row
+				mixin item(t, i, bgColor)
+					.col-sm-6.col-lg-4
+						+e.item(style=`--bgColor: ${bgColor};`)
+							h5!= t
+							+img(`img/@2x/sAlgorithm-img-${i}.png`)
+				+item('Экономит Ваше время', '1', '#1B557A')
+				+item('Следит за&nbsp;Вашим депозито', '2', '#10222E')
+				+item('Зарабатывает Вам деньги на полном автомате', '3', '#0D335F')
+			+e.footer.text-center
+				a.btn.btn-primary(href="#sAccess") Жмите здесь, чтобы создать автоматический источник дохода
+	// end sAlgorithm

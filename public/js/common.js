@@ -260,18 +260,18 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
-	const knowingSlider = new Swiper('.sHowMuch__slider--js , .sKnowing__slider--js', {
-		// slidesPerView: 5,
-		slidesPerView: 1,
-		loop: true,
-		pagination: {
-			el: '.swiper-pagination',
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	});
+	// const knowingSlider = new Swiper('.sHowMuch__slider--js , .sKnowing__slider--js', {
+	// 	// slidesPerView: 5,
+	// 	slidesPerView: 1,
+	// 	loop: true,
+	// 	pagination: {
+	// 		el: '.swiper-pagination',
+	// 	},
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// });
 	// modal window
 
 
